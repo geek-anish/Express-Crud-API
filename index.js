@@ -6,7 +6,7 @@ make app listen to port
 import express, { json } from "express";
 import { port } from "./src/config.js";
 import firstRoutes from "./src/routes/firstroutes.js";
-import adminRoutesRoutes from "./src/routes/adminRoutes.js";
+import adminRoutes from "./src/routes/adminRoutes.js";
 import productRoutes from "./src/routes/productRoutes.js";
 
 import staffRoutes from "./src/routes/staffRoutes.js";
@@ -29,7 +29,7 @@ app.use(json()); //making system capable to take json // always place this code 
 // app.use((req,res,next)=>{console.log("i am application middleware 1");next();},
 // (req,res,next)=>{console.log("i am application middleware 2");next();})
 app.use("/", firstRoutes);
-app.use("/admin", adminRoutesRoutes);
+app.use("/admin", adminRoutes);
 app.use("/staff", staffRoutes);
 app.use("/product", productRoutes);
 app.use("/user",userRoutes);

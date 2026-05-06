@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-const adminRoutesRoutes = Router();
+const adminRoutes = Router();
 
-adminRoutesRoutes
-  .route("/") // localhost:8000
+adminRoutes
+  .route("/") // localhost:8000/adminroutes
   .post((req, res, next) => {
     res.json({
         sucesss:true,
@@ -18,7 +18,7 @@ adminRoutesRoutes
     console.log(req.params)
   })
 
-  adminRoutesRoutes
+  adminRoutes
   .route("/:id")
   .get((req, res, next)=>{
     res.json({
@@ -40,7 +40,7 @@ adminRoutesRoutes
     });
   })
 
-export default adminRoutesRoutes;
+export default adminRoutes;
 
 
 
