@@ -14,7 +14,8 @@ import pagenotfoundmiddleware from "./src/middleware/pagenotfound.mjs";
 import errormiddleware from "./src/middleware/errorMiddleware.js";
 import connectToMongoDb from "./src/connectToDb/connectToMongoDb.js";
 import userRoutes from "./src/routes/userRoutes.js";
-import SchoolRoutes from "./src/routes/schoolRoutes.js";
+import studentRoutes from "./src/routes/studentRoutes.js";
+import jobRoutes from "./src/routes/jobRoutes.js";
 
 const app = express();
 
@@ -32,9 +33,9 @@ app.use("/", firstRoutes);
 app.use("/admin", adminRoutes);
 app.use("/staff", staffRoutes);
 app.use("/product", productRoutes);
-app.use("/user",userRoutes);
-app.use("/school",SchoolRoutes);
-
+app.use("/user", userRoutes);
+app.use("/job", jobRoutes);
+app.use("/student", studentRoutes);
 
 // pasge not found middleware
 

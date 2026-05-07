@@ -11,7 +11,7 @@ salary
 
 import { Schema } from "mongoose";
 
-const schoolSchema = Schema({
+const jobSchema = Schema({
   title: {
     type: String,
     required: [true, "title is required"],
@@ -30,4 +30,4 @@ const schoolSchema = Schema({
   },
 });
 
-export default schoolSchema;
+export default jobSchema;
