@@ -17,6 +17,17 @@ const productSchema = Schema({
     type: Boolean,
     required: [true, "isDamage is required"],
   },
-});
+},
+{
+  timestamps:true,
+  toJSON: {
+transform: (doc, ret) => {
+delete ret.__v;
+ret.id=ret._id;
+delete ret._id;
+},
+}
+}
+);
 
 export default productSchema;

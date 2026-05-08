@@ -1,7 +1,9 @@
+import { Product } from "../schema/model.js";
+
 export const createProductController = async (req, res, next) => {
     const  result =  await Product.create(req.body);
 
-     res.json({
+     res.json({ 
       success:true,
       message:"product created sucessfully",
       result:result,
