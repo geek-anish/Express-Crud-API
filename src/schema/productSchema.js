@@ -1,5 +1,7 @@
 import { Schema } from "mongoose";
 
+import productPaginate from "mongoose-paginate-v2";
+
 const productSchema = Schema({
   name: {
     type: String,
@@ -29,5 +31,7 @@ delete ret._id;
 }
 }
 );
+
+productSchema.plugin(productPaginate);
 
 export default productSchema;

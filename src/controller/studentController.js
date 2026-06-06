@@ -11,7 +11,17 @@ export const createStudentController=async (req,res,next)=>{
 };
 
 export const readAllStudentController=async (req,res,next)=>{
-    let result=await Student.find({});
+    // let result=await Student.find({});
+
+    let {sort,select,limit,page,...find}=req.query;
+
+     let result=await Student.paginate(find,{
+            limit:limit,
+            page:page,
+            sort:sort,
+            select:select,
+          })
+
     res.json({
         success:true,
         message:"Student read sucessfully",
