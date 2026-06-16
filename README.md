@@ -1,3 +1,5 @@
 # Express Crud API
 
-Implemented basic CRUD operations
+REST API to perform basic CRUD operations
+Built  with Express.js and MongoDb
+Used middleware concept for error handling
